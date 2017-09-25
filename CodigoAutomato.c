@@ -48,20 +48,24 @@ int main(){
 										printf("> Palavra Aceita\n",c);
 									}
 								}else{
-									printf("%c-> Palavra Rejeitada | Transicao inexistente.",c); 
+									if( x == 10 || x == EOF ){
+										printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+									}else{
+										printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+									}
 								}
 							}else{
 								if( x == 10 || x == EOF ){
-									printf("> Palavra Rejeitada | Estado atual nao eh final.");
+									printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 								}else{
-									printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+									printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 								}
 							}					
 						}else{
 							if( x == 10 || x == EOF ){
-								printf("> Palavra Rejeitada | Estado atual nao eh final.");
+								printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 							}else{
-								printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+								printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 							}
 						}
 					break;
@@ -69,11 +73,13 @@ int main(){
 					case 105: //i
 						printf("%c-> Estado 5 -",c);
 						
-						x = (int)fgetc(arq);
+						c = fgetc(arq);
+						x = (int)c;
 						if( x == 117 ){
 							printf("%c-> Estado 9 -",c);
 						
-							x = (int)fgetc(arq);
+							c = fgetc(arq);
+							x = (int)c; 
 							switch(x){
 								case 65: //A
 									printf("%c-> Estado 10 -",c);
@@ -93,22 +99,26 @@ int main(){
 									}
 								break;
 									
-								default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+								default: if( x == 10 || x == EOF ){
+											printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+										}else{
+											printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+										}
 									
 							}
 						}else{
 							if( x == 10 || x == EOF ){
-								printf("> Palavra Rejeitada | Estado atual nao eh final.");
+								printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 							}else{
-								printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+								printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 							}
 						}
 					break;
 					
 					default: if( x == 10 || x == EOF ){
-								printf("> Palavra Rejeitada | Estado atual nao eh final.");
+								printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 							}else{
-								printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+								printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 							}
 				}
 			break;
@@ -142,13 +152,17 @@ int main(){
 							}							
 						break;
 							
-						default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+						default: if( x == 10 || x == EOF ){
+									printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+								}else{
+									printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+								}
 					}
 				}else{
 					if( x == 10 || x == EOF ){
-						printf("> Palavra Rejeitada | Estado atual nao eh final.");
+						printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 					}else{
-						printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+						printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 					}
 				}			
 			break;
@@ -197,28 +211,32 @@ int main(){
 												printf("> Palavra Aceita\n",c);
 											}
 										}else{
-											printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+											if( x == 10 || x == EOF ){
+												printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+											}else{
+												printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+											}
 										}
 									}else{
 										if( x == 10 || x == EOF ){
-											printf("> Palavra Rejeitada | Estado atual nao eh final.");
+											printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 										}else{
-											printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+											printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 										}
 									}
 								}else{
 									if( x == 10 || x == EOF ){
-										printf("> Palavra Rejeitada | Estado atual nao eh final.");
+										printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 									}else{
-										printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+										printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 									}
 								}
 							break;
 							
 							default: if( x == 10 || x == EOF ){
-										printf("> Palavra Rejeitada | Estado atual nao eh final.");
+										printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 									}else{
-										printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+										printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 									}
 						}		
 					break;
@@ -247,14 +265,18 @@ int main(){
 								}
 							break;
 							
-							default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+							default: if( x == 10 || x == EOF ){
+										printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+									}else{
+										printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+									}
 						}
 					break;
 						
 					default: if( x == 10 || x == EOF ){
-								printf("> Palavra Rejeitada | Estado atual nao eh final.");
+								printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 							}else{
-								printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+								printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 							}
 				}			
 			break;
@@ -277,13 +299,17 @@ int main(){
 							printf("> Palavra Aceita\n",c);
 						}
 					}else{
-						printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+						if( x == 10 || x == EOF ){
+							printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+						}else{
+							printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+						}
 					}
 				}else{
 					if( x == 10 || x == EOF ){
-						printf("> Palavra Rejeitada | Estado atual nao eh final.");
+						printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 					}else{
-						printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+						printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 					}
 				}
 			break;
@@ -301,7 +327,7 @@ int main(){
 						printf("> Palavra Aceita\n",c);
 					}
 				}else{
-					printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+					printf("> Palavra Rejeitada | Transicao inexistente.");
 				}
 			break;
 			
@@ -340,13 +366,17 @@ int main(){
 									}
 								break;
 									
-								default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+								default: if( x == 10 || x == EOF ){
+											printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+										}else{
+											printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+										}
 							}
 						}else{
 							if( x == 10 || x == EOF ){
-								printf("> Palavra Rejeitada | Estado atual nao eh final.");
+								printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 							}else{
-								printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+								printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 							}
 						}
 					break;
@@ -360,7 +390,11 @@ int main(){
 						}
 					break;
 					
-					default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+					default: if( x == 10 || x == EOF ){
+								printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+							}else{
+								printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+							}
 				}
 			break;
 			
@@ -397,14 +431,18 @@ int main(){
 												}
 											break;
 											
-											default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+											default: if( x == 10 || x == EOF ){
+														printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+													}else{
+														printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+													}
 										}
 									break;
 									
 									default: if( x == 10 || x == EOF ){
-												printf("> Palavra Rejeitada | Estado atual nao eh final.");
+												printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 											}else{
-												printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+												printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 											}
 								}
 							break;
@@ -424,7 +462,11 @@ int main(){
 										}
 									break;
 											
-									default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+									default: if( x == 10 || x == EOF ){
+												printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+											}else{
+												printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+											}
 								}
 							break;
 							
@@ -437,7 +479,11 @@ int main(){
 								}
 							break;
 							
-							default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+							default: if( x == 10 || x == EOF ){
+										printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+									}else{
+										printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+									}
 						}
 					break;
 					
@@ -450,14 +496,18 @@ int main(){
 						}
 					break;
 					
-					default: printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+					default: if( x == 10 || x == EOF ){
+								printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
+							}else{
+								printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
+							}
 				}
 			break;
 			
 			default: if( x == 10 || x == EOF ){
-						printf("> Palavra Rejeitada | Estado atual nao eh final.");
+						printf("> Palavra Rejeitada | Estado atual nao eh final.\n");
 					}else{
-						printf("%c-> Palavra Rejeitada | Transicao inexistente.",c);
+						printf("%c-> Palavra Rejeitada | Transicao inexistente.\n",c);
 					}
 		}
 		/*
